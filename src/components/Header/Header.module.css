@@ -1,0 +1,25 @@
+.introHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 5rem);
+  padding: 0 1.4rem;
+}
+
+@media screen and (min-width: 992px) {
+  .introHeader {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .introHeader {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .introHeader {
+    font-size: 1.6rem;
+  }
+}

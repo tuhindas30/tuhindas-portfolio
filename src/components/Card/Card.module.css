@@ -1,0 +1,30 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+}
+
+.cardBody {
+  padding: 1rem;
+}
+
+.cardTitle {
+  margin-bottom: 0.5rem;
+  color: var(--offset-color);
+}
+
+.cardText {
+  margin-bottom: 1rem;
+}
+
+.cardFooter {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--offset-color);
+}

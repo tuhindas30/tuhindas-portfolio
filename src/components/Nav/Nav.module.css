@@ -1,0 +1,119 @@
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.navBrand {
+  margin-right: 1rem;
+  width: 100px;
+  height: 50px;
+}
+
+.navToggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navTogglerIcon {
+  vertical-align: middle;
+}
+
+.navCollapse {
+  position: absolute;
+  top: 4.5rem;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  padding: 0 0.5rem;
+  background-color: var(--dark-background-color);
+}
+
+.navCollapse.show {
+  display: block;
+}
+
+.navPills {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.navLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navLink:hover {
+  transition: 0.5s;
+  background-color: #0d2c07;
+  border-radius: 10rem;
+}
+
+.navLink.active {
+  font-weight: bold;
+  color: #fff;
+}
+
+@media screen and (min-width: 411px) {
+  .navBrand {
+    width: 110px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .navBrand {
+    width: 120px;
+    height: 65px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navBrand {
+    width: 140px;
+    height: 70px;
+  }
+
+  .navToggler {
+    display: none;
+  }
+
+  .navCollapse {
+    display: block;
+    position: static;
+  }
+
+  .navPills {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navBrand {
+    width: 100px;
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navBrand {
+    width: 120px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navBrand {
+    width: 140px;
+    height: 80px;
+  }
+}

@@ -1,0 +1,22 @@
+.inputGroup {
+  position: relative;
+  display: flex;
+}
+
+.formControl {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #0d2c07;
+  color: var(--offset-color);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.inputGroupText {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  color: var(--offset-color);
+}
