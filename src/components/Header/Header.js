@@ -12,7 +12,7 @@ const Header = () => {
           are here!
         </p>
         <a
-          href="Tuhin's Resume.pdf"
+          href="Tuhin_Das_Resume.pdf"
           target="_blank"
           rel="noreferrer"
           className="primary-button">
