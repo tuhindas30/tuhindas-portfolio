@@ -1,0 +1,45 @@
+.header {
+  padding: 0 1.4rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.imageContainer {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.image {
+  padding: 0.5rem !important;
+  border-radius: 50%;
+  background: rgb(134, 247, 221);
+  background: linear-gradient(
+    90deg,
+    rgba(134, 247, 221, 1) 20%,
+    rgba(108, 255, 90, 1) 80%
+  );
+}
+
+.intro {
+  text-align: center;
+}
+
+.techList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.techListItem {
+  width: 50%;
+}
+
+.link {
+  margin-left: 0.3rem;
+  color: var(--primary-color);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    text-decoration: underline;
+  }
+}

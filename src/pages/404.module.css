@@ -1,0 +1,31 @@
+.errorMsgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 5rem);
+}
+
+.heading {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--offset-color);
+}
+
+@media screen and (min-width: 992px) {
+  .heading {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+}

@@ -1,10 +1,11 @@
-import Head from "next/head";
-import Card from "../../components/Card/Card";
+import { getAllProjects } from "../../lib/queries";
+import Document from "../../components/Document";
+import Card from "../../components/Card";
 import Section from "../../components/Section";
-import { getProjects } from "../../queries";
+import styles from "./Projects.module.css";
 
 export const getStaticProps = async () => {
-  const data = await getProjects();
+  const data = await getAllProjects();
 
   return {
     props: {
@@ -18,30 +19,17 @@ const Projects = ({ projects }) => {
 
   return (
     <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#6cff5a" />
-        <meta name="description" content="Projects by tuhindas" />
-        <meta name="keywords" content="Portfolio, Next.js, GraphQL, Apollo" />
-        <meta name="author" content="Tuhin Das" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="tuhindas | Projects" />
-        <meta property="og:url" content="https://tuhindas.me" />
-        <meta property="og:description" content="Projects by tuhindas" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://i.imgur.com/cSlF4tn.jpg" />
-        <title>tuhindas | Projects</title>
-      </Head>
-      <header>
-        <main className="main">
-          <h1>Projects</h1>
-          <p className="light-offset-color">
-            My personal projects are a way for me to set down my growth as a
-            developer.
-          </p>
-        </main>
+      <Document
+        description={"Projects by tuhindas"}
+        image={"https://i.imgur.com/cSlF4tn.jpg"}
+        title={"tuhindas | Projects"}
+      />
+      <header className={styles.header}>
+        <h1>Projects</h1>
+        <p style={{ color: "var(--light-offset-color)" }}>
+          My personal projects are a way for me to set down my growth as a
+          developer.
+        </p>
       </header>
       <Section>
         {sortedProjects.map((project) => (
