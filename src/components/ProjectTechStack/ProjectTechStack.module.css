@@ -1,0 +1,9 @@
+.stackName {
+  padding: 0.16rem 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--light-offset-color);
+  color: var(--dark-background-color);
+  font-weight: bold;
+  border-radius: 10rem;
+  margin-right: 0.5rem;
+}

@@ -1,25 +1,15 @@
 import { FaGithub, FaLink } from "react-icons/fa";
+import styles from "./ProjectLink.module.css";
 
 const ProjectLink = ({ repo, demo }) => {
-  const cardLinkStyle = {
-    display: "flex",
-    alignItems: "center",
-    listStyle: "none",
-    fontSize: "1.5rem",
-  };
-
-  const cardLinkItemStyle = {
-    marginRight: "1rem",
-  };
-
   return (
-    <ul style={cardLinkStyle}>
-      <li style={cardLinkItemStyle}>
+    <ul className={styles.link}>
+      <li style={{ marginRight: "1rem" }}>
         <a href={repo} target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
       </li>
-      <li style={cardLinkItemStyle}>
+      <li style={{ marginRight: "1rem" }}>
         <a href={demo} target="_blank" rel="noreferrer">
           <FaLink />
         </a>

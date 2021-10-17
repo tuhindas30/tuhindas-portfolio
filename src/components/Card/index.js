@@ -11,6 +11,7 @@ const Card = ({ project }) => {
         alt={project.title}
         width={1080}
         height={607}
+        className={styles.image}
       />
       <div className={styles.cardBody}>
         <h2 className={styles.cardTitle}>{project.title}</h2>

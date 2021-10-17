@@ -1,0 +1,84 @@
+.header {
+  padding: 0 1.4rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.coverImage {
+  border-radius: 0.5rem;
+}
+
+.title {
+  margin: 1rem 0;
+}
+
+.markdown {
+  margin-top: 1rem;
+}
+
+.link {
+  margin-left: 0.3rem;
+  color: var(--primary-color);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    text-decoration: underline;
+  }
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin: 1rem 0;
+}
+
+.markdown p a {
+  color: var(--primary-color);
+}
+
+.markdown p a:hover {
+  text-decoration: underline;
+}
+
+.markdown p img,
+.markdown img {
+  display: block;
+  max-width: 100%;
+  margin: 1rem auto;
+  border-radius: 0.3rem;
+}
+
+.markdown ul {
+  list-style: inside;
+}
+
+.markdown ul li {
+  line-height: 1.8rem;
+}
+
+.markdown pre {
+  border-radius: 0.3rem;
+}
+
+.markdown p code,
+.markdown code {
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  color: rgb(255, 198, 109);
+  background: #2b2b2b;
+}
+
+.markdown blockquote {
+  border-left: 0.5rem solid var(--offset-color);
+  padding: 0.5em 10px;
+  margin: 1rem 0;
+}
+
+.markdown blockquote p {
+  margin-bottom: 0;
+  font-style: italic;
+}

@@ -1,0 +1,19 @@
+.heading {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--offset-color);
+}
+
+.blog {
+  margin-bottom: 2rem;
+}
+
+.blogLink {
+  margin-left: 0.3rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .blogLink:hover {
+    text-decoration: underline;
+  }
+}

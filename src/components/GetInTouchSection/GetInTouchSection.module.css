@@ -1,9 +1,7 @@
-.introHeader {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: calc(100vh - 5rem);
-  padding: 0 1.4rem;
+.heading {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--offset-color);
 }
 
 .primaryButton {
@@ -29,23 +27,5 @@
       rgba(134, 247, 221, 0.8) 20%,
       rgba(108, 255, 90, 0.8) 80%
     );
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .introHeader {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .introHeader {
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .introHeader {
-    font-size: 1.6rem;
   }
 }

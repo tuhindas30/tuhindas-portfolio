@@ -1,10 +1,10 @@
 import { serverClient, hashnodeClient } from "./apollo";
 import { gql } from "@apollo/client";
 
-export const getProjects = async () => {
+export const getAllProjects = async () => {
   const { data } = await serverClient.query({
     query: gql`
-      query GetProjects {
+      query GetAllProjects {
         projects {
           id
           title
@@ -23,10 +23,10 @@ export const getProjects = async () => {
   return data;
 };
 
-export const getArticles = async () => {
+export const getAllBlogs = async () => {
   const { data } = await hashnodeClient.query({
     query: gql`
-      query GetPosts {
+      query GetAlBlogs {
         user(username: "tuhindas") {
           publication {
             posts(page: 0) {
@@ -40,6 +40,31 @@ export const getArticles = async () => {
         }
       }
     `,
+  });
+  return data;
+};
+
+export const getBlog = async (slug) => {
+  const { data } = await hashnodeClient.query({
+    query: gql`
+      query GetBlog($slug: String!) {
+        post(slug: $slug, hostname: "tuhindas.hashnode.dev") {
+          title
+          coverImage
+          contentMarkdown
+          totalReactions
+          dateAdded
+          slug
+          author {
+            name
+            photo
+          }
+        }
+      }
+    `,
+    variables: {
+      slug,
+    },
   });
   return data;
 };

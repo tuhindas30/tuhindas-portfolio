@@ -6,36 +6,32 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import styles from "./SocialIcons.module.css";
 
 const SocialIcons = () => {
-  const iconContainerStyle = {
-    display: "flex",
-    justifyContent: "space-evenly",
-    margin: "1rem auto",
-    listStyle: "none",
-    fontSize: "1.5rem",
-  };
-
   return (
-    <ul style={iconContainerStyle}>
-      <li>
+    <ul className={styles.iconContainer}>
+      <li className={styles.icon}>
         <a
+          className={styles.iconLink}
           target="_blank"
           rel="noreferrer"
           href="https://github.com/tuhindas30">
           <FaGithub />
         </a>
       </li>
-      <li>
+      <li className={styles.icon}>
         <a
+          className={styles.iconLink}
           target="_blank"
           rel="noreferrer"
           href="https://twitter.com/tuhindas30">
           <FaTwitter />
         </a>
       </li>
-      <li>
+      <li className={styles.icon}>
         <a
+          className={styles.iconLink}
           target="_blank"
           rel="noreferrer"
           href="https://linkedin.com/in/tuhindas30">
@@ -43,24 +39,27 @@ const SocialIcons = () => {
         </a>
       </li>
 
-      <li>
+      <li className={styles.icon}>
         <a
+          className={styles.iconLink}
           target="_blank"
           rel="noreferrer"
           href="https://instagram.com/tuhin.das.td">
           <FaInstagram />
         </a>
       </li>
-      <li>
+      <li className={styles.icon}>
         <a
+          className={styles.iconLink}
           target="_blank"
           rel="noreferrer"
           href="https://facebook.com/tuhin.das.td">
           <FaFacebook />
         </a>
       </li>
-      <li>
+      <li className={styles.icon}>
         <a
+          className={styles.iconLink}
           target="_blank"
           rel="noreferrer"
           href="mailto:mailme.tuhindas@gmail.com">

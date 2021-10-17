@@ -1,0 +1,24 @@
+.scrollBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #0d2c07;
+  color: var(--offset-color);
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--primary-color);
+  transition: opacity 0.5s;
+}
+
+.show {
+  opacity: 100;
+  pointer-events: all;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}

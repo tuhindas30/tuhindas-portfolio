@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
-import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "../NavLink";
+import { GiHamburgerMenu } from "react-icons/gi";
 import navBrand from "./tuhindas.svg";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
   const [showNavLink, setShowNavLink] = useState(false);
-  const router = useRouter();
 
   const handleNavHamburger = () => {
     setShowNavLink((state) => !state);
@@ -20,7 +18,7 @@ const Nav = () => {
       <div className={styles.navBrand}>
         <Link href="/">
           <a style={{ display: "block" }}>
-            <Image src={navBrand} alt="tuhindas" />
+            <Image src={navBrand} alt="tuhindas logo" />
           </a>
         </Link>
       </div>
