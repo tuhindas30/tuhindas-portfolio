@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BlogPublishDate from "../BlogPublishDate";
+import { getFormattedTimeStamp } from "../../utils";
 import { Blog } from "../../types";
 import styles from "./BlogCard.module.css";
 
@@ -9,16 +9,16 @@ interface BlogCardProps {
 
 const BlogCard = ({ post }: BlogCardProps) => {
   return (
-    <article className={styles.blog}>
-      <BlogPublishDate dateString={post.dateAdded} />
-      <h1 className={styles.heading}>{post.title}</h1>
-      <p style={{ color: "var(--light-offset-color)" }}>
+    <article className={styles.card}>
+      <time className={styles.date}>
+        {getFormattedTimeStamp(post.dateAdded)}
+      </time>
+      <h3 className={styles.heading}>{post.title}</h3>
+      <p className={styles.brief}>
         {post.brief}
-        <span className={styles.blogLink}>
-          <Link href={`/blogs/${post.slug}`}>
-            <a style={{ color: "var(--primary-color)" }}>Read more</a>
-          </Link>
-        </span>
+        <Link href={`/blogs/${post.slug}`}>
+          <a className={styles.link}>Read more</a>
+        </Link>
       </p>
     </article>
   );

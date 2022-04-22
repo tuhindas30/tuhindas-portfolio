@@ -1,0 +1,34 @@
+.heading {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  color: var(--offset-color);
+}
+
+.linkContainer {
+  text-align: center;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1400px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .link {
+    font-size: 1.5rem;
+  }
+}

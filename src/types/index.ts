@@ -17,7 +17,7 @@ export interface Blog {
   _id: string;
   title: string;
   brief: string;
-  dateAdded: string;
+  dateAdded: Date;
   slug: string;
 }
 
