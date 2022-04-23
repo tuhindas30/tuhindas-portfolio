@@ -1,0 +1,113 @@
+.card {
+  margin-bottom: 2rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+}
+
+.image {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.cardBody {
+  padding-inline: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  color: var(--offset-color);
+}
+
+.techStack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 1rem;
+  color: var(--offset-color);
+}
+
+.stackName {
+  padding: 0.16rem 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--light-offset-color);
+  color: var(--dark-background-color);
+  font-weight: bold;
+  border-radius: 10rem;
+  margin-right: 0.5rem;
+}
+
+.listContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.listItem {
+  margin-right: 2rem;
+  padding-bottom: 1.2rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(.icon, .link):hover {
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .cardTitle {
+    font-size: 2rem;
+  }
+
+  .cardText,
+  .stackName {
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .cardBody {
+    padding-inline: 2rem;
+  }
+
+  .cardTitle {
+    font-size: 2.5rem;
+  }
+
+  .cardText,
+  .stackName {
+    font-size: 1.5rem;
+  }
+
+  .stackName {
+    padding: 0.3rem 1.2rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  .link {
+    font-size: 1.5rem;
+  }
+}

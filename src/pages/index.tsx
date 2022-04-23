@@ -1,14 +1,10 @@
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import Document from "../components/Document";
-import Card from "../components/Card";
 const Header = dynamic(() => import("../components/Header"));
-const RecentBlogs = dynamic(() => import("../components/RecentBlogs"));
-import Section from "../components/Section";
+const RecentSection = dynamic(() => import("../components/RecentSection"));
 import { getAllBlogs, getAllProjects } from "../lib/queries";
 import { Project, Blog } from "../types";
-import styles from "../../styles/Home.module.css";
 
 interface HomeProps {
   projects: Project[];
@@ -31,18 +27,8 @@ const Home = ({ projects, blogs }: HomeProps) => {
         title={"tuhindas"}
       />
       <Header />
-      <RecentBlogs blogs={recentBlogs} />
-      <Section>
-        <h1 className={styles.heading}>Recent Projects</h1>
-        {recentProjects.map((project) => (
-          <Card key={project.id} project={project} />
-        ))}
-        <div style={{ textAlign: "center" }}>
-          <Link href="/projects">
-            <a className={styles.link}>More Projects</a>
-          </Link>
-        </div>
-      </Section>
+      <RecentSection type="BLOGS" blogs={recentBlogs} />
+      <RecentSection type="PROJECTS" projects={recentProjects} />
     </>
   );
 };

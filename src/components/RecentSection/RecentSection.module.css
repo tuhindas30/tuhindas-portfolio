@@ -11,9 +11,16 @@
 .link {
   color: var(--primary-color);
   text-decoration: underline;
+  transition: 0.5s;
 }
 
-@media screen and (min-width: 1400px) {
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: var(--offset-color);
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .heading {
     font-size: 2.8rem;
   }
