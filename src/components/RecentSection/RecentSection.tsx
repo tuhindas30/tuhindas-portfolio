@@ -20,6 +20,7 @@ type RecentSectionProps = RecentBlogs | RecentProjects;
 
 const RecentSection = (props: RecentSectionProps) => {
   const seeMoreLink = props.type === "BLOGS" ? "/blogs" : "/projects";
+
   return (
     <Section>
       <h2 className={styles.heading}>Recent {props.type.toLowerCase()}</h2>
@@ -32,7 +33,7 @@ const RecentSection = (props: RecentSectionProps) => {
         ))}
       <div className={styles.linkContainer}>
         <Link href={seeMoreLink}>
-          <a className={styles.link}>See more {props.type.toLowerCase()}</a>
+          <a className={styles.link}>View more {props.type.toLowerCase()}</a>
         </Link>
       </div>
     </Section>
