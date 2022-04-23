@@ -1,31 +1,51 @@
 .heading {
-  font-size: 1.6rem;
+  position: relative;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
   color: var(--offset-color);
 }
 
-.primaryButton {
-  display: block;
-  width: fit-content;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  background: linear-gradient(
-    90deg,
-    rgba(134, 247, 221, 1) 20%,
-    rgba(108, 255, 90, 1) 80%
-  );
-  color: var(--dark-background-color);
-  border-radius: 0.5rem;
+.imageGif {
+  position: absolute;
+  bottom: -0.8rem;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .primaryButton:hover {
-    background: linear-gradient(
-      90deg,
-      rgba(134, 247, 221, 0.8) 20%,
-      rgba(108, 255, 90, 0.8) 80%
-    );
+.message {
+  position: relative;
+  color: var(--light-offset-color);
+}
+
+.button {
+  display: block;
+  margin: 1rem auto;
+}
+
+.button::after {
+  content: "Say Hello";
+}
+
+@media screen and (min-width: 1200px) {
+  .message {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+
+  .message {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .message {
+    font-size: 2.5rem;
   }
 }

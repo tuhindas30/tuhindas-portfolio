@@ -32,6 +32,10 @@
   margin: 1rem auto;
 }
 
+.headerButton::after {
+  content: "Resume";
+}
+
 @media screen and (min-width: 992px) {
   .introHeader {
     font-size: 1.2rem;

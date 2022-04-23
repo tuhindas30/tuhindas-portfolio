@@ -59,7 +59,6 @@ a {
 }
 
 .primary-button::after {
-  content: "Resume";
   background-color: var(--primary-color);
 }
 
