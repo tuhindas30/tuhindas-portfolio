@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import Section from "../Section";
 const BlogCard = dynamic(() => import("../BlogCard"));
@@ -21,9 +22,25 @@ type RecentSectionProps = RecentBlogs | RecentProjects;
 const RecentSection = (props: RecentSectionProps) => {
   const seeMoreLink = props.type === "BLOGS" ? "/blogs" : "/projects";
 
+  const sectionEmoji =
+    props.type === "BLOGS" ? "/images/writing_hand.gif" : "/images/rocket.gif";
+
   return (
     <Section>
-      <h2 className={styles.heading}>Recent {props.type.toLowerCase()}</h2>
+      <h2 className={styles.heading}>
+        Recent {props.type.toLowerCase()}&nbsp;
+        <span
+          className={`${styles.imageGif} ${
+            props.type === "BLOGS" ? styles.writingHandGif : ""
+          }`}>
+          <Image
+            src={sectionEmoji}
+            alt="Section emoji"
+            width={50}
+            height={50}
+          />
+        </span>
+      </h2>
       {props.type === "BLOGS" &&
         props.blogs.map((blog) => <BlogCard key={blog._id} post={blog} />)}
 

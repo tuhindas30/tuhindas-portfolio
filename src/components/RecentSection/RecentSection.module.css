@@ -1,7 +1,16 @@
 .heading {
+  position: relative;
   font-size: 2rem;
   padding-bottom: 0.5rem;
   color: var(--offset-color);
+}
+
+.imageGif {
+  position: absolute;
+}
+
+.writingHandGif {
+  bottom: 0;
 }
 
 .linkContainer {
