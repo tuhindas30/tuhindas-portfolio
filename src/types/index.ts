@@ -1,3 +1,5 @@
+import { IconType } from "react-icons/lib";
+
 export interface TechStack {
   id: string;
   name: string;
@@ -55,4 +57,11 @@ export interface HashnodePost {
 
 export interface GetHashnodeBlog {
   post: HashnodePost;
+}
+
+export interface SocialMedia {
+  id: number;
+  name: string;
+  link: string;
+  icon: IconType;
 }

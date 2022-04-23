@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SocialIcons from "../SocialIcons";
 import styles from "./Footer.module.css";
 
@@ -6,11 +7,17 @@ const Footer = () => {
     <footer className={styles.footer}>
       <SocialIcons />
       <div className={styles.footerText}>
-        <span style={{ color: "rgba(255, 255, 255, 0.5)" }}>Made with</span> ❤️
-        <span
-          style={{ color: "rgba(255, 255, 255, 0.5)", marginLeft: "0.3rem" }}>
-          by
+        <span className={styles.offsetColor}>Made with</span>&nbsp;
+        <span className={styles.imageGif}>
+          <Image
+            src="/images/sparkling_heart.gif"
+            alt="Sparkling heart"
+            width={20}
+            height={20}
+          />
         </span>
+        <span className={styles.offsetColor}>&nbsp;by</span>
+        &nbsp;
         <span className={styles.author}>Tuhin Das</span>
       </div>
     </footer>

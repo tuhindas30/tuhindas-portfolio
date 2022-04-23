@@ -1,4 +1,4 @@
-.iconContainer {
+.iconList {
   display: flex;
   justify-content: space-evenly;
   margin: 2rem auto;
@@ -6,19 +6,34 @@
   font-size: 1.5rem;
 }
 
-.icon {
+.iconItem {
   display: flex;
-  transition: var(--transition);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .icon:hover {
-    background-color: #0d2c07;
-    border-radius: 0.5rem;
-  }
 }
 
 .iconLink {
   display: flex;
   padding: 0.4rem;
+}
+
+.icon {
+  transition: var(--transition);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .icon:hover {
+    transform: rotate(var(--rotation-degrees));
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .iconLink {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .iconLink {
+    font-size: 2.5rem;
+  }
 }
