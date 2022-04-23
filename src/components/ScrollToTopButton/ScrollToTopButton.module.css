@@ -10,7 +10,7 @@
   color: var(--offset-color);
   border-radius: 0.5rem;
   border: 0.1rem solid var(--primary-color);
-  transition: opacity 0.5s;
+  transition: opacity var(--transition);
 }
 
 .show {

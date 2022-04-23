@@ -11,7 +11,7 @@
 .link {
   color: var(--primary-color);
   text-decoration: underline;
-  transition: 0.5s;
+  transition: var(--transition);
 }
 
 @media (hover: hover) and (pointer: fine) {

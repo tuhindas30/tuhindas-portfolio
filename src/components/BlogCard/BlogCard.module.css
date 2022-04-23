@@ -20,9 +20,16 @@
   padding-left: 0.3rem;
   color: var(--primary-color);
   text-decoration: underline;
+  transition: var(--transition);
 }
 
-@media screen and (min-width: 1400px) {
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: var(--offset-color);
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .date,
   .brief {
     font-size: 1.2rem;

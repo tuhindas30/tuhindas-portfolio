@@ -50,11 +50,11 @@
   display: block;
   padding: 0.5rem 1rem;
   color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .navLink:hover {
-    transition: 0.5s;
     background-color: #0d2c07;
     border-radius: 10rem;
   }

@@ -13,6 +13,7 @@
   --sky-blue: #86f7dd;
   --primary-color: #6cff5a;
   --border-radius: 0.3rem;
+  --transition: 0.5s;
 }
 
 html,
@@ -44,7 +45,7 @@ a {
   padding: 0.5rem 1.8rem;
   opacity: 0;
   border-radius: var(--border-radius);
-  transition: 0.5s;
+  transition: var(--transition);
 }
 
 .primary-button {
@@ -68,7 +69,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
   .button {
     font-size: 1.3rem;
   }

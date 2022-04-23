@@ -8,11 +8,11 @@
 
 .icon {
   display: flex;
+  transition: var(--transition);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .icon:hover {
-    transition: 0.5s;
     background-color: #0d2c07;
     border-radius: 0.5rem;
   }

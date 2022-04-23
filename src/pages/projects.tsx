@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import { getAllProjects } from "../lib/queries";
 import Document from "../components/Document";
-import Card from "../components/Card";
+import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
 import { Project } from "../types";
 import styles from "../../styles/Projects.module.css";
@@ -29,7 +29,7 @@ const Projects = ({ projects }: ProjectsProps) => {
       </header>
       <Section>
         {sortedProjects.map((project) => (
-          <Card key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </Section>
     </>
