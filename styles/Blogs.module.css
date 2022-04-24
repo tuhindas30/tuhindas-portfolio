@@ -1,6 +1,15 @@
 .header {
-  padding: 0 1.4rem;
-  margin: 1rem 0 2rem 0;
+  padding-inline: 1.4rem;
+  padding-bottom: 2rem;
+}
+
+.message {
+  color: var(--light-offset-color);
+}
+
+.noArticlesMessage {
+  text-align: center;
+  font-size: bold;
 }
 
 .coverImage {
@@ -81,4 +90,18 @@
 .markdown blockquote p {
   margin-bottom: 0;
   font-style: italic;
+}
+
+@media screen and (min-width: 1600px) {
+  .message,
+  .noArticlesMessage {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .message,
+  .noArticlesMessage {
+    font-size: 1.5rem;
+  }
 }

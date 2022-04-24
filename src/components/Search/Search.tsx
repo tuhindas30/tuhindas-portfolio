@@ -16,11 +16,9 @@ const Search = ({ searchTerm, onType }: SearchProps) => {
           value={searchTerm}
           onChange={(e) => onType(e.target.value)}
           className={styles.formControl}
-          placeholder="Search articles"
+          placeholder="Search blogs"
         />
-        <span className={styles.inputGroupText}>
-          <BsSearch />
-        </span>
+        <BsSearch className={styles.searchIcon} />
       </div>
     </Section>
   );

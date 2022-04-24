@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
+import Document from "../../components/Document";
+const Section = dynamic(() => import("../../components/Section"));
+const Search = dynamic(() => import("../../components/Search"));
+const BlogCard = dynamic(() => import("../../components/BlogCard"));
 import { getAllBlogs } from "../../lib/queries";
 import { filterPosts } from "../../lib/blog";
-import Document from "../../components/Document";
-const BlogCard = dynamic(() => import("../../components/BlogCard"));
-import Search from "../../components/Search";
-import Section from "../../components/Section";
 import { Blog } from "../../types";
 import styles from "../../../styles/Blogs.module.css";
 
@@ -27,8 +27,8 @@ const Blogs = ({ blogs }: BlogsProps) => {
         title={"tuhindas | Blogs"}
       />
       <header className={styles.header}>
-        <h1>Blogs</h1>
-        <p style={{ color: "var(--light-offset-color)" }}>
+        <h1 className="sectionHeading">Blogs</h1>
+        <p className={styles.message}>
           I love building new things. This blog is a way for me to write down
           and share new ideas and lessons with everyone.
         </p>
@@ -38,7 +38,7 @@ const Blogs = ({ blogs }: BlogsProps) => {
         {searchedPosts.length > 0 ? (
           searchedPosts.map((post) => <BlogCard key={post._id} post={post} />)
         ) : (
-          <h2 style={{ textAlign: "center" }}>No articles found</h2>
+          <p className={styles.noArticlesMessage}>No articles found</p>
         )}
       </Section>
     </>
