@@ -19,7 +19,7 @@ const GetInTouch = () => {
       <p className={styles.message}>
         Whether you have an idea for a project or just want to say hi, feel free
         to shoot me an email!&nbsp;
-        <span className={styles.imageGif}>
+        <span className={`${styles.imageGif} ${styles.dartGif}`}>
           <Image
             src="/images/dart_hit.gif"
             alt="Dart hit"

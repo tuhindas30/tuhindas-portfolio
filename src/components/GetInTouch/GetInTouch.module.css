@@ -1,6 +1,10 @@
 .imageGif {
   position: absolute;
-  bottom: -0.8rem;
+  bottom: -0.5rem;
+}
+
+.dartGif {
+  bottom: 0rem;
 }
 
 .message {
