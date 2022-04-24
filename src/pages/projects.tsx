@@ -1,8 +1,9 @@
 import { GetStaticProps } from "next";
-import { getAllProjects } from "../lib/queries";
+import dynamic from "next/dynamic";
 import Document from "../components/Document";
-import ProjectCard from "../components/ProjectCard";
-import Section from "../components/Section";
+const Section = dynamic(() => import("../components/Section"));
+const ProjectCard = dynamic(() => import("../components/ProjectCard"));
+import { getAllProjects } from "../lib/queries";
 import { Project } from "../types";
 import styles from "../../styles/Projects.module.css";
 
@@ -21,8 +22,8 @@ const Projects = ({ projects }: ProjectsProps) => {
         title={"tuhindas | Projects"}
       />
       <header className={styles.header}>
-        <h1>Projects</h1>
-        <p style={{ color: "var(--light-offset-color)" }}>
+        <h1 className="sectionHeading">Projects</h1>
+        <p className={styles.message}>
           My personal projects are a way for me to set down my growth as a
           developer.
         </p>

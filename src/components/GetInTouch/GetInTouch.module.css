@@ -5,6 +5,7 @@
 
 .message {
   position: relative;
+  padding-bottom: 1rem;
   color: var(--light-offset-color);
 }
 

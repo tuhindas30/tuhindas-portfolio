@@ -1,6 +1,7 @@
 .card {
+  --card-border-color: rgba(108, 255, 90, 0.5);
   margin-bottom: 2rem;
-  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border: 0.1rem solid var(--card-border-color);
   border-radius: var(--border-radius);
 }
 
