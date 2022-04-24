@@ -6,7 +6,30 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
-import { SocialMedia } from "../types";
+import { NavPill, SocialMedia } from "../types";
+
+export const navPills: NavPill[] = [
+  {
+    id: 1,
+    title: "Home",
+    path: "/",
+  },
+  {
+    id: 2,
+    title: "Projects",
+    path: "/projects",
+  },
+  {
+    id: 3,
+    title: "Blogs",
+    path: "/blogs",
+  },
+  {
+    id: 4,
+    title: "About me",
+    path: "/about",
+  },
+];
 
 export const socialMediaList: SocialMedia[] = [
   {

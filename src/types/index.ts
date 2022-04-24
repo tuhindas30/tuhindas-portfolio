@@ -59,6 +59,12 @@ export interface GetHashnodeBlog {
   post: HashnodePost;
 }
 
+export interface NavPill {
+  id: number;
+  title: string;
+  path: string;
+}
+
 export interface SocialMedia {
   id: number;
   name: string;
