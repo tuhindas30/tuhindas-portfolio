@@ -27,7 +27,7 @@ const RecentSection = (props: RecentSectionProps) => {
 
   return (
     <Section>
-      <h2 className={styles.heading}>
+      <h2 className="sectionHeading">
         Recent {props.type.toLowerCase()}&nbsp;
         <span
           className={`${styles.imageGif} ${

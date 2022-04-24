@@ -5,7 +5,7 @@ import styles from "./GetInTouch.module.css";
 const GetInTouch = () => {
   return (
     <Section>
-      <h2 className={styles.heading}>
+      <h2 className="sectionHeading">
         Get In Touch!&nbsp;
         <span className={styles.imageGif}>
           <Image

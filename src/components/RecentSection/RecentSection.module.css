@@ -1,10 +1,3 @@
-.heading {
-  position: relative;
-  font-size: 2rem;
-  padding-bottom: 0.5rem;
-  color: var(--offset-color);
-}
-
 .imageGif {
   position: absolute;
 }
@@ -30,20 +23,12 @@
 }
 
 @media screen and (min-width: 1600px) {
-  .heading {
-    font-size: 2.8rem;
-  }
-
   .link {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 1930px) {
-  .heading {
-    font-size: 3.5rem;
-  }
-
   .link {
     font-size: 1.5rem;
   }
