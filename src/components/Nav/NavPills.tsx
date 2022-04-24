@@ -4,11 +4,14 @@ import styles from "./Nav.module.css";
 
 interface NavPillsProps {
   isHamMenuOpen: boolean;
+  onPillClick: () => void;
 }
 
-const NavPills = ({ isHamMenuOpen }: NavPillsProps) => {
+const NavPills = ({ isHamMenuOpen, onPillClick }: NavPillsProps) => {
   return (
-    <ul className={`${styles.navPills} ${isHamMenuOpen ? styles.active : ""}`}>
+    <ul
+      className={`${styles.navPills} ${isHamMenuOpen ? styles.active : ""}`}
+      onClick={onPillClick}>
       {navPills.map((pill) => (
         <li key={pill.id} className={styles.navItem}>
           <NavLink

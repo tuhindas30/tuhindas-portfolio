@@ -10,7 +10,10 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <NavLogo />
-      <NavPills isHamMenuOpen={isHamMenuOpen} />
+      <NavPills
+        isHamMenuOpen={isHamMenuOpen}
+        onPillClick={() => setIsHamMenuOpen(false)}
+      />
       <HamburgerIcon
         isHamMenuOpen={isHamMenuOpen}
         onHamMenuOpen={() => setIsHamMenuOpen((state) => !state)}
