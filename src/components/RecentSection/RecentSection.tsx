@@ -50,7 +50,9 @@ const RecentSection = (props: RecentSectionProps) => {
         ))}
       <div className={styles.linkContainer}>
         <Link href={seeMoreLink}>
-          <a className={styles.link}>View more {props.type.toLowerCase()}</a>
+          <a className={`link ${styles.link}`}>
+            View more {props.type.toLowerCase()}
+          </a>
         </Link>
       </div>
     </Section>

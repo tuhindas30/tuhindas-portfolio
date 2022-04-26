@@ -11,8 +11,6 @@
 }
 
 .link {
-  color: var(--primary-color);
-  text-decoration: underline;
   transition: var(--transition);
 }
 

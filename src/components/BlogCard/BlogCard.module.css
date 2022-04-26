@@ -18,8 +18,6 @@
 
 .link {
   padding-left: 0.3rem;
-  color: var(--primary-color);
-  text-decoration: underline;
   transition: var(--transition);
 }
 

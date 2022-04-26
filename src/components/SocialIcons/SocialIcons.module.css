@@ -13,6 +13,7 @@
 .iconLink {
   display: flex;
   padding: 0.4rem;
+  color: var(--offset-color);
 }
 
 .icon {

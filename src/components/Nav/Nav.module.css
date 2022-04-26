@@ -73,6 +73,7 @@
 }
 
 .navLink {
+  text-decoration: none;
   display: block;
   width: fit-content;
   padding: 0.5rem 1rem;

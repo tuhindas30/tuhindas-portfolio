@@ -17,7 +17,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
       <p className={styles.brief}>
         {post.brief}
         <Link href={`/blogs/${post.slug}`}>
-          <a className={styles.link}>Read more</a>
+          <a className={`link ${styles.link}`}>Read more</a>
         </Link>
       </p>
     </article>

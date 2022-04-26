@@ -25,9 +25,9 @@ body {
   color: var(--offset-color);
 }
 
-a {
-  color: var(--offset-color);
-  text-decoration: none;
+.link {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .sectionHeading {
@@ -38,6 +38,7 @@ a {
 }
 
 .button {
+  text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.5rem 1.8rem;
