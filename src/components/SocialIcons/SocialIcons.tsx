@@ -1,11 +1,11 @@
 import SocialMediaIcon from "./SocialMediaIcon";
-import { socialMediaList } from "../../constants";
+import { socialHandles } from "../../constants";
 import styles from "./SocialIcons.module.css";
 
 const SocialIcons = () => {
   return (
     <ul className={styles.iconList}>
-      {socialMediaList.map((handle) => {
+      {socialHandles.map((handle) => {
         return <SocialMediaIcon key={handle.id} socialHandle={handle} />;
       })}
     </ul>
