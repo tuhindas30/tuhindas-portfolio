@@ -1,35 +1,39 @@
 .introHeader {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: calc(100vh - 5rem);
-  padding: 0 1.4rem;
+  font-size: 1.25rem;
+  min-height: calc(100vh - 4.6rem);
+  padding-inline: 1.4rem;
 }
 
-.primaryButton {
+.greetMessage {
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.aboutBrief {
+  position: relative;
+  color: var(--light-offset-color);
+}
+
+.inlineLink {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.smilingGif {
+  position: absolute;
+  bottom: -0.8rem;
+}
+
+.headerButton {
   display: block;
-  width: fit-content;
   margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  background: linear-gradient(
-    90deg,
-    rgba(134, 247, 221, 1) 20%,
-    rgba(108, 255, 90, 1) 80%
-  );
-  color: var(--dark-background-color);
-  border-radius: 0.5rem;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .primaryButton:hover {
-    background: linear-gradient(
-      90deg,
-      rgba(134, 247, 221, 0.8) 20%,
-      rgba(108, 255, 90, 0.8) 80%
-    );
-  }
+.headerButton::after {
+  content: "Resume";
 }
 
 @media screen and (min-width: 992px) {
@@ -44,8 +48,14 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
   .introHeader {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .introHeader {
+    font-size: 2.5rem;
   }
 }
