@@ -1,7 +1,9 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Document from "../components/Document";
-import Section from "../components/Section";
-import SocialIcons from "../components/SocialIcons";
+const Section = dynamic(() => import("../components/Section"));
+const AboutHeader = dynamic(() => import("../components/AboutHeader"));
+const MyTechStack = dynamic(() => import("../components/MyTechStack"));
 import styles from "../../styles/About.module.css";
 
 const About = () => {
@@ -12,61 +14,61 @@ const About = () => {
         image={"https://i.imgur.com/cSlF4tn.jpg"}
         title={"tuhindas | About"}
       />
-      <header className={styles.header}>
-        <h1>About Me</h1>
-        <div className={styles.imageContainer}>
-          <Image
-            src="/images/tuhindas.jpg"
-            alt="image of tuhindas"
-            className={styles.image}
-            width={200}
-            height={200}
-          />
-        </div>
-        <div className={styles.intro}>
-          <h2>Tuhin Das</h2>
-          <div style={{ color: "var(--light-offset-color)" }}>
-            <span>Building frontend</span>
-            <a
-              href="https://tknz.gg"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.link}>
-              @TKNZ
-            </a>
-          </div>
-          <div style={{ color: "var(--light-offset-color)" }}>
-            Full Stack JavaScript Developer
-          </div>
-          <SocialIcons />
-        </div>
-      </header>
+      <AboutHeader />
       <Section>
-        <p>
-          Hello! I&apos;m Tuhin, a full stack developer based in Kolkata, India
-          &#x1F1EE;&#x1F1F3;.
+        <p className={styles.description}>
+          Hello! I&apos;m Tuhin, a self-taught full stack web developer from
+          West Bengal, India &nbsp;
+          <span className={styles.flagGif}>
+            <Image
+              src="/images/india_flag.gif"
+              alt="India flag"
+              width={289}
+              height={192}
+            />
+          </span>
+          <br />
+          <br />I started my web development journey back in 2020 with&nbsp;
+          <a
+            href="https://neog.camp"
+            target="_blank"
+            rel="noreferrer"
+            className="link">
+            neogcamp
+          </a>
+          , a web development bootcamp by&nbsp;
+          <a
+            href="https://tanaypratap.com"
+            target="_blank"
+            rel="noreferrer"
+            className="link">
+            Tanay Pratap
+          </a>
+          , and successfully developed five full-stack projects using React.js
+          and other stacks.
+          <br />
+          <br />
+          Currently, I&apos;m working at&nbsp;
+          <a
+            href="https://tknz.gg"
+            target="_blank"
+            rel="noreferrer"
+            className="link">
+            TKNZ
+          </a>
+          &nbsp; as a frontend engineer. Here, in my job, I design layouts,
+          solve logical problems and perform optimizations.
+          <br />
+          <br />
+          When I&apos;m not coding, I may be probably reading books, playing
+          computer games or playing guitar.
+          <br />
+          <br />
+          Here are a few technologies I&apos;ve worked with:
+          <br />
+          <br />
         </p>
-        <p>
-          I&apos;m a self-taught full stack web developer who loves to work on
-          React.
-        </p>
-        <p>
-          When I&apos;m not in front of a computer screen, I am probably playing
-          my guitar, exploring Tagore or Indian Classical Music.
-        </p>
-        <p>Here are a few technologies I&apos;ve been working with recently:</p>
-        <ul className={styles.techList}>
-          <li className={styles.techListItem}>▸ React</li>
-          <li className={styles.techListItem}>▸ NodeJS</li>
-          <li className={styles.techListItem}>▸ Express</li>
-          <li className={styles.techListItem}>▸ MongoDB</li>
-          <li className={styles.techListItem}>▸ React-Redux</li>
-          <li className={styles.techListItem}>▸ Next.js</li>
-          <li className={styles.techListItem}>▸ TypeScript</li>
-          <li className={styles.techListItem}>▸ JavaScript</li>
-          <li className={styles.techListItem}>▸ Firebase</li>
-          <li className={styles.techListItem}>▸ GraphQL</li>
-        </ul>
+        <MyTechStack />
       </Section>
     </>
   );
