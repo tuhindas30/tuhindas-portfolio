@@ -8,7 +8,7 @@
   cursor: pointer;
   background-color: #0d2c07;
   color: var(--offset-color);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   border: 0.1rem solid var(--primary-color);
   transition: opacity var(--transition);
 }

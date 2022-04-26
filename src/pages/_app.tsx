@@ -1,7 +1,10 @@
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import Layout from "../components/Layout";
-import ScrollToTopButton from "../components/ScrollToTopButton";
+const ScrollToTopButton = dynamic(
+  () => import("../components/ScrollToTopButton")
+);
 import "../../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
