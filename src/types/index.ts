@@ -50,7 +50,7 @@ export interface HashnodePost {
   brief: string;
   contentMarkdown: string;
   totalReactions: number;
-  dateAdded: string;
+  dateAdded: Date;
   slug: string;
   author: HashnodePostAuthor;
 }
@@ -65,9 +65,9 @@ export interface NavPill {
   path: string;
 }
 
-export interface SocialMedia {
+export interface SocialHandles {
   id: number;
   name: string;
-  link: string;
+  link?: string;
   icon: IconType;
 }
