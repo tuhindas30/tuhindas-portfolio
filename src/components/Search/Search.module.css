@@ -1,22 +1,40 @@
 .inputGroup {
   position: relative;
-  display: flex;
 }
 
 .formControl {
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1rem;
-  line-height: 1.5;
   background-color: #0d2c07;
   color: var(--offset-color);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
 }
 
-.inputGroupText {
+.formControl:focus {
+  outline: 0.1rem solid var(--primary-color);
+}
+
+.searchIcon {
   position: absolute;
-  top: 0.5rem;
+  top: 0.6rem;
   right: 0.8rem;
   color: var(--offset-color);
+}
+
+@media screen and (min-width: 1600px) {
+  .formControl {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .formControl {
+    font-size: 1.5rem;
+  }
+
+  .searchIcon {
+    top: 1rem;
+  }
 }

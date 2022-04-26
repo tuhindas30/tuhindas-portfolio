@@ -1,13 +1,27 @@
 .footer {
-  padding: 1rem 0;
+  --footer-text-color: rgba(255, 255, 255, 0.5);
+  padding-block: 1rem;
 }
 
 .footerText {
   text-align: center;
-  font-size: 0.9rem;
+}
+
+.offsetColor {
+  color: var(--footer-text-color);
+}
+
+.imageGif {
+  position: relative;
+  bottom: -0.3rem;
 }
 
 .author {
   color: var(--primary-color);
-  margin-left: 0.3rem;
+}
+
+@media screen and (min-width: 1930px) {
+  .footerText {
+    font-size: 1.5rem;
+  }
 }

@@ -1,19 +1,50 @@
+.date {
+  color: var(--light-offset-color);
+}
+
+.card {
+  padding-bottom: 2.5rem;
+}
+
 .heading {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
   color: var(--offset-color);
 }
 
-.blog {
-  margin-bottom: 2rem;
+.brief {
+  color: var(--light-offset-color);
 }
 
-.blogLink {
-  margin-left: 0.3rem;
+.link {
+  padding-left: 0.3rem;
+  transition: var(--transition);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .blogLink:hover {
-    text-decoration: underline;
+  .link:hover {
+    color: var(--offset-color);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .date,
+  .brief {
+    font-size: 1.2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .date,
+  .brief {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
   }
 }

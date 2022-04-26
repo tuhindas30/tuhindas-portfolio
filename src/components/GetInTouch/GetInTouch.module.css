@@ -1,0 +1,41 @@
+.imageGif {
+  position: absolute;
+  bottom: -0.5rem;
+}
+
+.dartGif {
+  bottom: 0rem;
+}
+
+.message {
+  position: relative;
+  padding-bottom: 1rem;
+  color: var(--light-offset-color);
+}
+
+.button {
+  display: block;
+  margin: 1rem auto;
+}
+
+.button::after {
+  content: "Say Hello";
+}
+
+@media screen and (min-width: 1200px) {
+  .message {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .message {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .message {
+    font-size: 2.5rem;
+  }
+}

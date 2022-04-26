@@ -10,7 +10,11 @@
   --dark-background-color: #051103;
   --offset-color: #f4f5f7;
   --light-offset-color: rgba(255, 255, 255, 0.8);
+  --sky-blue: #86f7dd;
   --primary-color: #6cff5a;
+  --border-radius: 0.3rem;
+  --transition: 0.5s;
+  --rotation-degrees: -5deg;
 }
 
 html,
@@ -21,16 +25,84 @@ body {
   color: var(--offset-color);
 }
 
-a {
-  color: var(--offset-color);
-  text-decoration: none;
+.link {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
-button {
+.sectionHeading {
+  position: relative;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  color: var(--offset-color);
+}
+
+.button {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1.8rem;
+  width: fit-content;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
   cursor: pointer;
 }
 
-p {
-  margin-bottom: 1rem;
-  line-height: 1.8rem;
+.button::after {
+  position: absolute;
+  inset: 0;
+  padding: 0.5rem 1.8rem;
+  opacity: 0;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.primary-button {
+  position: relative;
+  color: var(--dark-background-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--sky-blue) 20%,
+    var(--primary-color) 80%
+  );
+}
+
+.primary-button::after {
+  background-color: var(--primary-color);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transform: rotate(var(--rotation-degrees));
+  }
+
+  .primary-button:hover::after {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .sectionHeading {
+    font-size: 2.8rem;
+  }
+
+  .button {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .sectionHeading {
+    font-size: 3.5rem;
+  }
+
+  .button {
+    font-size: 1.8rem;
+    padding: 0.8rem 2.5rem;
+  }
+
+  .button::after {
+    padding: 0.8rem 2.5rem;
+  }
 }

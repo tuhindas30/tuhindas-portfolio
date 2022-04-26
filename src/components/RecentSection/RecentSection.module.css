@@ -1,0 +1,33 @@
+.imageGif {
+  position: absolute;
+}
+
+.writingHandGif {
+  bottom: 0;
+}
+
+.linkContainer {
+  text-align: center;
+}
+
+.link {
+  transition: var(--transition);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: var(--offset-color);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .link {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .link {
+    font-size: 1.5rem;
+  }
+}
