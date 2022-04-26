@@ -1,0 +1,69 @@
+.coverImageContainer {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.coverImage {
+  text-align: center;
+  border-radius: var(--border-radius);
+}
+
+.originalPostLink {
+  padding-top: 1rem;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  padding-block: 1rem;
+}
+
+.markdown p {
+  line-height: 1.8rem;
+}
+
+.markdown a {
+  color: var(--primary-color);
+}
+
+.markdown img {
+  display: block;
+  max-width: 100%;
+  margin: 1rem auto;
+  border-radius: var(--border-radius);
+}
+
+.markdown ul {
+  list-style: inside;
+}
+
+.markdown li {
+  padding-block: 0.2rem;
+}
+
+.markdown pre {
+  padding-bottom: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.markdown code {
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
+  background: #2b2b2b;
+}
+
+.markdown blockquote {
+  border-left: 0.5rem solid var(--offset-color);
+  padding: 0.5em 10px;
+  padding-block: 1rem;
+}
+
+.markdown blockquote p {
+  margin-bottom: 0;
+  font-style: italic;
+}

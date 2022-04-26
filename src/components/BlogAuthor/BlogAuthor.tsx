@@ -1,11 +1,11 @@
 import Image from "next/image";
-import BlogPublishDate from "../BlogPublishDate";
+import { getFormattedTimeStamp } from "../../utils";
 import styles from "./BlogAuthor.module.css";
 
 interface BlogAuthorProps {
   name: string;
   photo: string;
-  publishedOn: string;
+  publishedOn: Date;
   likes: number;
 }
 
@@ -21,11 +21,19 @@ const BlogAuthor = ({ name, photo, publishedOn, likes }: BlogAuthorProps) => {
       />
       <div className={styles.authorDetails}>
         <div>
-          <div>{name}</div>
-          <BlogPublishDate dateString={publishedOn} />
+          <p className={styles.authorName}>{name}</p>
+          <time className={styles.publishDate}>
+            {getFormattedTimeStamp(publishedOn)}
+          </time>
         </div>
-        <div>
-          <span className="light-offset-color">{likes}</span> 💖
+        <div className={styles.likesContainer}>
+          <span className={styles.likes}>{likes}</span>&nbsp;
+          <Image
+            src="/images/sparkling_heart.gif"
+            alt="Sparkling heart"
+            width={20}
+            height={20}
+          />
         </div>
       </div>
     </div>
