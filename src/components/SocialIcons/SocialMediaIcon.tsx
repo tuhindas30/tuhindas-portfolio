@@ -1,8 +1,8 @@
-import { SocialMedia } from "../../types";
+import { SocialHandles } from "../../types";
 import styles from "./SocialIcons.module.css";
 
 interface SocialMediaIconProps {
-  socialHandle: SocialMedia;
+  socialHandle: SocialHandles;
 }
 
 const SocialMediaIcon = ({ socialHandle }: SocialMediaIconProps) => {
