@@ -12,13 +12,6 @@ interface HomeProps {
 }
 
 const Home = ({ projects, blogs }: HomeProps) => {
-  const recentProjects = projects
-    .map((item) => item)
-    .reverse()
-    .slice(0, 2);
-
-  const recentBlogs = blogs.map((item) => item).slice(0, 2);
-
   return (
     <>
       <Document
@@ -27,8 +20,8 @@ const Home = ({ projects, blogs }: HomeProps) => {
         title={"tuhindas"}
       />
       <Header />
-      <RecentSection type="BLOGS" blogs={recentBlogs} />
-      <RecentSection type="PROJECTS" projects={recentProjects} />
+      <RecentSection type="BLOGS" blogs={blogs.slice(0, 2)} />
+      <RecentSection type="PROJECTS" projects={projects.slice(0, 2)} />
     </>
   );
 };

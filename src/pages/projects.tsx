@@ -12,8 +12,6 @@ interface ProjectsProps {
 }
 
 const Projects = ({ projects }: ProjectsProps) => {
-  const sortedProjects = projects.map((item) => item).reverse();
-
   return (
     <>
       <Document
@@ -29,7 +27,7 @@ const Projects = ({ projects }: ProjectsProps) => {
         </p>
       </header>
       <Section>
-        {sortedProjects.map((project) => (
+        {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </Section>
