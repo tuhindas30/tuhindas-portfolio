@@ -29,7 +29,7 @@ const GetInTouch = () => {
         </span>
       </p>
       <a
-        href="mailto:mailme.tuhindas@gmail.com"
+        href="mailto:contact@tuhindas.dev"
         className={`button primary-button ${styles.button}`}>
         Say Hello
       </a>
