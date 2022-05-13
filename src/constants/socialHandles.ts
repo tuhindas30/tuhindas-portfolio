@@ -42,7 +42,7 @@ const socialHandles: SocialHandles[] = [
   {
     id: 6,
     name: "Email",
-    link: "mailto:mailme.tuhindas@gmail.com",
+    link: "mailto:contact@tuhindas.dev",
     icon: IoIosMail,
   },
 ];

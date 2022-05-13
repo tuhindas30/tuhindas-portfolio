@@ -18,8 +18,8 @@ const AboutHeader = () => {
           </div>
           <div className={styles.intro}>
             <h2>Tuhin Das</h2>
-            <p className={styles.description}>
-              <span>Building frontend</span>&nbsp;
+            {/* <p className={styles.description}>
+              <span>Frontend Developer</span>&nbsp;
               <a
                 href="https://tknz.gg"
                 target="_blank"
@@ -27,7 +27,7 @@ const AboutHeader = () => {
                 className="link">
                 @TKNZ
               </a>
-            </p>
+            </p> */}
             <p className={styles.description}>
               Full Stack JavaScript Developer
             </p>
