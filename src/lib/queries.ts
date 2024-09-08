@@ -20,14 +20,15 @@ const ALL_PROJECTS_QUERY = gql`
 `;
 
 const ALL_BLOGS_QUERY = gql`
-  query GetAlBlogs {
+  query GetAllBlogs {
     user(username: "tuhindas") {
-      publication {
-        posts(page: 0) {
-          _id
+      posts(pageSize: 0, page: 1) {
+        totalDocuments
+        nodes {
+          id
           title
           brief
-          dateAdded
+          publishedAt
           slug
         }
       }
@@ -37,37 +38,44 @@ const ALL_BLOGS_QUERY = gql`
 
 const BLOG_QUERY = gql`
   query GetBlog($slug: String!) {
-    post(slug: $slug, hostname: "tuhindas.hashnode.dev") {
-      title
-      coverImage
-      contentMarkdown
-      totalReactions
-      dateAdded
-      slug
-      author {
-        name
-        photo
+    publication(host: "tuhindas.hashnode.dev") {
+      id
+      post(slug: $slug) {
+        title
+        coverImage {
+          url
+        }
+        content {
+          markdown
+        }
+        reactionCount
+        publishedAt
+        slug
+        author {
+          name
+          profilePicture
+        }
       }
     }
   }
 `;
 
 export const getAllProjects = async () => {
-  const { data }: { data: GetAllProjects } = await serverClient.query({
+  const { data } = await serverClient.query<GetAllProjects>({
     query: ALL_PROJECTS_QUERY,
   });
   return data;
 };
 
 export const getAllBlogs = async () => {
-  const { data }: { data: GetAllHashnodeBlogs } = await hashnodeClient.query({
+  const { data } = await hashnodeClient.query<GetAllHashnodeBlogs>({
     query: ALL_BLOGS_QUERY,
   });
   return data;
 };
 
 export const getBlog = async (slug: string) => {
-  const { data }: { data: GetHashnodeBlog } = await hashnodeClient.query({
+  const { data } = await hashnodeClient.query<GetHashnodeBlog>({
     query: BLOG_QUERY,
     variables: {
       slug,

@@ -42,7 +42,7 @@ const RecentSection = (props: RecentSectionProps) => {
         </span>
       </h2>
       {props.type === "BLOGS" &&
-        props.blogs.map((blog) => <BlogCard key={blog._id} post={blog} />)}
+        props.blogs.map((blog) => <BlogCard key={blog.id} post={blog} />)}
 
       {props.type === "PROJECTS" &&
         props.projects.map((project) => (

@@ -16,10 +16,10 @@ export interface Project {
 }
 
 export interface Blog {
-  _id: string;
+  id: string;
   title: string;
   brief: string;
-  dateAdded: Date;
+  publishedAt: Date;
   slug: string;
 }
 
@@ -28,11 +28,11 @@ export interface GetAllProjects {
 }
 
 export interface HashnodePosts {
-  posts: Blog[];
+  nodes: Blog[];
 }
 
 export interface HashnodeUser {
-  publication: HashnodePosts;
+  posts: HashnodePosts;
 }
 
 export interface GetAllHashnodeBlogs {
@@ -41,22 +41,31 @@ export interface GetAllHashnodeBlogs {
 
 export interface HashnodePostAuthor {
   name: string;
-  photo: string;
+  profilePicture: string;
 }
 
 export interface HashnodePost {
   title: string;
-  coverImage: string;
   brief: string;
-  contentMarkdown: string;
-  totalReactions: number;
-  dateAdded: Date;
+  reactionCount: number;
   slug: string;
+  publishedAt: Date;
+  coverImage: {
+    url: string;
+  };
+  content: {
+    markdown: string;
+  };
   author: HashnodePostAuthor;
 }
 
-export interface GetHashnodeBlog {
+export interface HashnodePublication {
+  id: string;
   post: HashnodePost;
+}
+
+export interface GetHashnodeBlog {
+  publication: HashnodePublication;
 }
 
 export interface NavPill {

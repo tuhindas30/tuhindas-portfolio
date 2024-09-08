@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       projects,
-      blogs: user.publication.posts,
+      blogs: user.posts.nodes,
     },
   };
 };

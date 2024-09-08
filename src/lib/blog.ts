@@ -2,8 +2,12 @@ import { getAllBlogs } from "./queries";
 import { Blog } from "../types";
 
 const getAllSlugs = async () => {
-  const data = await getAllBlogs();
-  const slug = data.user.publication.posts.map((post) => {
+  const {
+    user: {
+      posts: { nodes },
+    },
+  } = await getAllBlogs();
+  const slug = nodes.map((post) => {
     return {
       params: {
         slug: post.slug,

@@ -11,7 +11,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <article className={styles.card}>
       <time className={styles.date}>
-        {getFormattedTimeStamp(post.dateAdded)}
+        {getFormattedTimeStamp(post.publishedAt)}
       </time>
       <h3 className={styles.heading}>{post.title}</h3>
       <p className={styles.brief}>

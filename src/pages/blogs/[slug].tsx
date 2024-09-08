@@ -20,12 +20,12 @@ const Blog = ({ blog }: BlogProps) => {
     <Section>
       <Document
         description={"Blogs by tuhindas"}
-        image={blog.coverImage}
+        image={blog.coverImage.url}
         title={blog.title}
       />
       <div className={styles.coverImageContainer}>
         <Image
-          src={blog.coverImage}
+          src={blog.coverImage.url}
           alt={blog.title}
           width={1600}
           height={840}
@@ -35,9 +35,9 @@ const Blog = ({ blog }: BlogProps) => {
       <h2 className="sectionHeading">{blog.title}</h2>
       <BlogAuthor
         name={blog.author.name}
-        photo={blog.author.photo}
-        publishedOn={blog.dateAdded}
-        likes={blog.totalReactions}
+        photo={blog.author.profilePicture}
+        publishedOn={blog.publishedAt}
+        likes={blog.reactionCount}
       />
       <ReactMarkdown
         components={{
@@ -45,7 +45,7 @@ const Blog = ({ blog }: BlogProps) => {
         }}
         className={styles.markdown}
         linkTarget="_blank">
-        {blog.contentMarkdown}
+        {blog.content.markdown}
       </ReactMarkdown>
       <p className={styles.originalPostLink}>
         This blog was actually posted&nbsp;
@@ -70,10 +70,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       notFound: true,
     };
 
-  const { post } = await getBlog(params.slug);
+  const { publication } = await getBlog(params.slug);
   return {
     props: {
-      blog: post,
+      blog: publication.post,
     },
   };
 };

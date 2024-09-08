@@ -36,7 +36,7 @@ const Blogs = ({ blogs }: BlogsProps) => {
       <Search searchTerm={searchTerm} onType={setSearchTerm} />
       <Section>
         {searchedPosts.length > 0 ? (
-          searchedPosts.map((post) => <BlogCard key={post._id} post={post} />)
+          searchedPosts.map((post) => <BlogCard key={post.id} post={post} />)
         ) : (
           <p className={styles.noArticlesMessage}>No articles found</p>
         )}
@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      blogs: user.publication.posts,
+      blogs: user.posts.nodes,
     },
   };
 };
