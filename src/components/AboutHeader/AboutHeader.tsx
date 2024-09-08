@@ -21,11 +21,11 @@ const AboutHeader = () => {
             <p className={styles.description}>
               <span>Software Engineer</span>&nbsp;
               <a
-                href="https://quolum.com"
+                href="https://redblock.ai"
                 target="_blank"
                 rel="noreferrer"
                 className="link">
-                @Quolum
+                @Redblock
               </a>
             </p>
             {/* <p className={styles.description}>
